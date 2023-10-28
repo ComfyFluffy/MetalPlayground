@@ -12,9 +12,14 @@
 		08F078AB2AE3DDA700FB2821 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F078AA2AE3DDA700FB2821 /* Item.swift */; };
 		08F078AD2AE3DDA800FB2821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08F078AC2AE3DDA800FB2821 /* Assets.xcassets */; };
 		08F078B02AE3DDA800FB2821 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08F078AF2AE3DDA800FB2821 /* Preview Assets.xcassets */; };
+		08F078B92AE3E1AA00FB2821 /* HTShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 08F078B82AE3E1AA00FB2821 /* HTShaders.metal */; };
+		08F078BB2AE3E6A700FB2821 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F078BA2AE3E6A600FB2821 /* MetalView.swift */; };
+		08F078BD2AE4C66D00FB2821 /* HTRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F078BC2AE4C66D00FB2821 /* HTRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0860F1FA2AECDB0400575724 /* HTShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTShaderTypes.h; sourceTree = "<group>"; };
+		0860F1FB2AECF7EB00575724 /* MetalPlayground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetalPlayground-Bridging-Header.h"; sourceTree = "<group>"; };
 		08F078A32AE3DDA700FB2821 /* MetalPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F078A62AE3DDA700FB2821 /* MetalPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalPlaygroundApp.swift; sourceTree = "<group>"; };
 		08F078A82AE3DDA700FB2821 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		08F078AC2AE3DDA800FB2821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08F078AF2AE3DDA800FB2821 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08F078B12AE3DDA800FB2821 /* MetalPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalPlayground.entitlements; sourceTree = "<group>"; };
+		08F078B82AE3E1AA00FB2821 /* HTShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HTShaders.metal; sourceTree = "<group>"; };
+		08F078BA2AE3E6A600FB2821 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		08F078BC2AE4C66D00FB2821 /* HTRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,10 @@
 		08F078A52AE3DDA700FB2821 /* MetalPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				08F078B72AE3DDBC00FB2821 /* HelloTriangle */,
 				08F078A62AE3DDA700FB2821 /* MetalPlaygroundApp.swift */,
+				08F078BA2AE3E6A600FB2821 /* MetalView.swift */,
+				0860F1FB2AECF7EB00575724 /* MetalPlayground-Bridging-Header.h */,
 				08F078A82AE3DDA700FB2821 /* ContentView.swift */,
 				08F078AA2AE3DDA700FB2821 /* Item.swift */,
 				08F078AC2AE3DDA800FB2821 /* Assets.xcassets */,
@@ -70,6 +81,16 @@
 				08F078AF2AE3DDA800FB2821 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08F078B72AE3DDBC00FB2821 /* HelloTriangle */ = {
+			isa = PBXGroup;
+			children = (
+				08F078B82AE3E1AA00FB2821 /* HTShaders.metal */,
+				0860F1FA2AECDB0400575724 /* HTShaderTypes.h */,
+				08F078BC2AE4C66D00FB2821 /* HTRenderer.swift */,
+			);
+			path = HelloTriangle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +125,7 @@
 				TargetAttributes = {
 					08F078A22AE3DDA700FB2821 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -144,6 +166,9 @@
 			files = (
 				08F078A92AE3DDA700FB2821 /* ContentView.swift in Sources */,
 				08F078AB2AE3DDA700FB2821 /* Item.swift in Sources */,
+				08F078B92AE3E1AA00FB2821 /* HTShaders.metal in Sources */,
+				08F078BB2AE3E6A700FB2821 /* MetalView.swift in Sources */,
+				08F078BD2AE4C66D00FB2821 /* HTRenderer.swift in Sources */,
 				08F078A72AE3DDA700FB2821 /* MetalPlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetalPlayground/MetalPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -293,6 +319,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.comfyfluffy.MetalPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalPlayground/MetalPlayground-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -302,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MetalPlayground/MetalPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -321,6 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.comfyfluffy.MetalPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalPlayground/MetalPlayground-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
